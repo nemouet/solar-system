@@ -20,6 +20,7 @@ jobs:
 
         - name: Checkout Respository
           uses: actions/checkout@v4
+
         - name: Setup NodeJS Version
           uses: actions/setup-node@v3
           with:
@@ -30,4 +31,10 @@ jobs:
         
         - name: Unit Testing
           run: npm test
+        
+        - name: Archive Test Result
+          uses: actions/upload-artifact@v3
+          with:
+            name: Mocah-Test-Result
+            path: test-results.xml
 
