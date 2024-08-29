@@ -17,11 +17,11 @@ jobs:
         name: Unit Testing
         services:
           mongo-db:
-            image: huyuet/mongo
+            image: huyuet/mongo:latest
             ports:
               - 27017:27017
         env:
-          MONGO_URI: 'mongodb+srv://localhost:27017/superData'
+          MONGO_URI: 'mongodb://localhost:27017/superData'
           MONGO_USERNAME: non-prod-user
           MONGO_PASSWORD: non-prod-password
         strategy:
