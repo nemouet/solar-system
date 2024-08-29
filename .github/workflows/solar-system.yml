@@ -60,7 +60,7 @@ jobs:
           if: always()
           uses: actions/upload-artifact@v3
           with:
-            name: Mocah-Test-Result
+            name: Mocha-Test-Result
             path: test-results.xml
 
     code-coverage:
@@ -120,7 +120,7 @@ jobs:
         
         - name: Upload to AWS S3
           run: echo "uploading ....."
-          
+
     docker:
       name: Containerization
       needs: [unit-testing, code-coverage]
