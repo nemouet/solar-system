@@ -108,7 +108,7 @@ jobs:
         - name: Download COde Coverage Artifact
           uses: actions/download-artifact@v3
           with:
-            name: Code-Coverage-Result
+            name: code-coverage-result
         
         - name: Merge Test Files
           run: |
