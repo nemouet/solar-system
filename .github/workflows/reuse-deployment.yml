@@ -1,0 +1,6 @@
+name: Deplyment - Reuse Deploy
+on:
+    workflow_call:
+
+jobs:
+    reuse-deploy:
