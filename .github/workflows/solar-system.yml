@@ -92,7 +92,7 @@ jobs:
           uses: actions/upload-artifact@v3
           with:
             name: code-coverage-result
-            path: coverage-results.xml
+            path: coverage
             retention-days: 5
 
     report-s3:
@@ -114,7 +114,6 @@ jobs:
           run: |
             ls -ltr
             mkdir report-${{github.sha}}
-            mv coverage-results.xml reports-${{github.sha}}/
             mv test-results.xml reports-${{github.sha}}/
             ls -ltr reports-${{github.sha}}/
         
