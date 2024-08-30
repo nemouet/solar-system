@@ -13,7 +13,7 @@ runs:
           path: ${{inputs.path-of-folder}}
           key: ${{runner.os}}-node-modules-${{hashFiles('package-lock.json')}}
     
-        - name: Install Dependencies
-          run: npm install
-          shell: bash
+      - name: Install Dependencies
+        run: npm install
+        shell: bash
 
